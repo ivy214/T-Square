@@ -1,4 +1,53 @@
+// EmailJS 초기화
+(function () {
+    emailjs.init("YOUR_PUBLIC_KEY"); // 여기에 EmailJS Public Key를 입력하세요
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Contact Form 처리
+    const contactForm = document.getElementById('contact-form');
+    const responseMessage = document.getElementById('response-message');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // 버튼 비활성화
+            const submitBtn = contactForm.querySelector('.btn-terminal');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '[ SENDING... ]';
+            submitBtn.disabled = true;
+
+            // EmailJS로 이메일 전송
+            emailjs.sendForm(
+                'YOUR_SERVICE_ID',  // 여기에 EmailJS Service ID를 입력하세요
+                'YOUR_TEMPLATE_ID', // 여기에 EmailJS Template ID를 입력하세요
+                this
+            ).then(
+                function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    responseMessage.innerHTML = '<span class="success">$ Message sent successfully! ✓</span>';
+                    responseMessage.style.color = 'var(--primary)';
+                    contactForm.reset();
+
+                    // 3초 후 메시지 제거
+                    setTimeout(() => {
+                        responseMessage.innerHTML = '';
+                    }, 3000);
+                },
+                function (error) {
+                    console.log('FAILED...', error);
+                    responseMessage.innerHTML = '<span class="error">$ Error: Failed to send message ✗</span>';
+                    responseMessage.style.color = '#ff5f56';
+                }
+            ).finally(() => {
+                // 버튼 다시 활성화
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
+
     // Reveal Animations
     const observerOptions = {
         threshold: 0.1
@@ -25,6 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .visible {
             opacity: 1 !important;
             transform: translateY(0) !important;
+        }
+        .response-message {
+            margin-top: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            min-height: 20px;
         }
     `;
     document.head.appendChild(style);

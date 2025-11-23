@@ -210,21 +210,26 @@
                     <div class="terminal-line">
                         <span class="prompt">$</span> <span class="cmd">initiate_contact_sequence</span>
                     </div>
-                    <form class="terminal-form">
+                    <form id="contact-form" class="terminal-form">
                         <div class="input-group">
                             <label>> Name:</label>
-                            <input type="text" class="terminal-input" required>
+                            <input type="text" name="from_name" class="terminal-input" required>
                         </div>
                         <div class="input-group">
                             <label>> Company:</label>
-                            <input type="text" class="terminal-input" required>
+                            <input type="text" name="company" class="terminal-input" required>
+                        </div>
+                        <div class="input-group">
+                            <label>> Email:</label>
+                            <input type="email" name="from_email" class="terminal-input" required>
                         </div>
                         <div class="input-group">
                             <label>> Message:</label>
-                            <textarea class="terminal-input" rows="3" required></textarea>
+                            <textarea name="message" class="terminal-input" rows="3" required></textarea>
                         </div>
                         <button type="submit" class="btn-terminal">[ EXECUTE ]</button>
                     </form>
+                    <div id="response-message" class="response-message"></div>
                 </div>
             </div>
         </div>
@@ -241,6 +246,8 @@
         </div>
     </footer>
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 
