@@ -5,10 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T2 Solution - Semiconductor Process Optimization</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description"
+        content="T-Square (T²) - Tool to Tool Optimization. The New Standard for Semiconductor Process Optimization.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         :root {
             --brand-navy: #0a192f;
@@ -93,27 +109,23 @@
 <body class="antialiased selection:bg-cyan-900 selection:text-cyan-400">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-[#0a192f]/90 backdrop-blur-md border-b border-[#112240]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <i data-lucide="cpu" class="text-cyan h-6 w-6"></i>
-                    <span class="font-bold text-xl tracking-wider text-white">T2 <span
-                            class="text-cyan">Solution</span></span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home"
-                            class="hover:text-cyan px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                        <a href="#challenge"
-                            class="hover:text-cyan px-3 py-2 rounded-md text-sm font-medium transition-colors">Challenge</a>
-                        <a href="#solution"
-                            class="hover:text-cyan px-3 py-2 rounded-md text-sm font-medium transition-colors">Solutions</a>
-                        <a href="#benefits"
-                            class="hover:text-cyan px-3 py-2 rounded-md text-sm font-medium transition-colors">Benefits</a>
-                    </div>
-                </div>
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand">
+                <span class="brand-text">T-Square</span>
+                <span class="brand-symbol">T²</span>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html#solutions" class="nav-link">Solutions</a>
+                <a href="index.html#areas" class="nav-link">Areas</a>
+                <a href="index.html#benefits" class="nav-link">Benefits</a>
+                <a href="brochure.html" class="nav-link">Brochure</a>
+                <a href="index.html#team" class="nav-link">Team</a>
+                <a href="index.html#contact" class="nav-cta">Contact_Us</a>
             </div>
+            <button class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -522,6 +534,19 @@
         </div>
     </section>
 
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                T-Square <span class="sup">T²</span>
+            </div>
+            <div class="footer-copy">
+                &copy; 2024 T-Square Inc. All Systems Operational.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
