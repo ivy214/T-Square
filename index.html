@@ -8,37 +8,51 @@
     <meta name="description"
         content="T-Square (T²) - Tool to Tool Optimization. The New Standard for Semiconductor Process Optimization.">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+    <!-- Open Graph -->
+    <meta property="og:title" content="T-Square (T²) | Precision Process Intelligence">
+    <meta property="og:description" content="Next-Gen Semiconductor Manufacturing Intelligence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t-square.com">
 
-    <!-- Icons -->
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "T-Square",
+      "url": "https://t-square.com",
+      "logo": "https://t-square.com/logo.png",
+      "description": "The New Standard for Semiconductor Process Optimization.",
+      "sameAs": ["https://linkedin.com/company/t-square"]
+    }
+    </script>
+
+    <!-- Icons & Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="grid-overlay"></div>
+    <!-- Background FX -->
+    <div class="bg-grid"></div>
+    <div class="glow-orb" style="top: -10%; right: -10%; width: 600px; height: 600px; background: var(--primary);">
+    </div>
+    <div class="glow-orb" style="bottom: 10%; left: -10%; width: 500px; height: 500px; background: var(--secondary);">
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container nav-wrapper">
-            <a href="#" class="brand">
-                <span class="brand-text">T-Square</span>
-                <span class="brand-symbol">T²</span>
+        <div class="container nav-content">
+            <a href="index.html" class="brand">
+                <div class="brand-logo">T²</div>
+                <span>T-Square</span>
             </a>
-            <div class="nav-menu">
+            <div class="nav-links">
                 <a href="#solutions" class="nav-link">Solutions</a>
-                <a href="#areas" class="nav-link">Areas</a>
+                <a href="#workflow" class="nav-link">Workflow</a>
                 <a href="#benefits" class="nav-link">Benefits</a>
                 <a href="brochure.html" class="nav-link">Brochure</a>
-                <a href="#team" class="nav-link">Team</a>
-                <a href="#contact" class="nav-cta">Contact_Us</a>
+                <a href="#contact" class="btn-nav">Contact Us</a>
             </div>
             <button class="menu-toggle">
                 <i class="fa-solid fa-bars"></i>
@@ -48,117 +62,257 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="code-badge">:: SYSTEM_READY</div>
+        <div class="container">
+            <div class="hero-content reveal active">
+                <div class="hero-badge">
+                    :: SYSTEM_ONLINE
+                </div>
                 <h1 class="hero-title">
-                    <span class="block-reveal">Tool to Tool</span>
-                    <span class="block-reveal highlight">Optimization</span>
+                    Precision <br>
+                    <span class="text-gradient">Beyond Limits</span>
                 </h1>
                 <p class="hero-desc">
-                    From Unit Process Optimization to Tool-to-Tool Matching.<br>
-                    Redefining the limits of semiconductor manufacturing with data-driven precision engineering.
+                    The new standard in Semiconductor Process Optimization.
+                    From Unit Process Control to Fleet-wide Synchronization.
                 </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-value">T²</span>
-                        <span class="stat-label">Algorithm</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-value">Zero</span>
-                        <span class="stat-label">Loss Time</span>
-                    </div>
-                </div>
                 <div class="hero-actions">
-                    <a href="#solutions" class="btn-primary">Explore Solutions <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-primary">
+                        Get Started <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="br.en.2.pdf" class="btn btn-glass" download>
+                        <i class="fa-solid fa-file-pdf"></i> Download Brochure
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="scroll-line"></div>
     </header>
 
     <!-- Solutions Section -->
     <section id="solutions" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">01</span>
-                <h2 class="section-title">Core Solutions</h2>
+            <div class="section-header reveal">
+                <span class="section-label">01 / Core Technology</span>
+                <h2 class="section-title">Intelligent Solutions</h2>
+                <p class="text-muted">Data-driven engineering for next-gen manufacturing.</p>
             </div>
 
-            <div class="solution-grid">
-                <div class="tech-card">
-                    <div class="card-border top-left"></div>
-                    <div class="card-border bottom-right"></div>
-                    <div class="card-header">
-                        <i class="fa-solid fa-microchip icon"></i>
-                        <h3>Unit Process Optimization</h3>
+            <div class="card-grid">
+                <div class="glass-card reveal">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-microchip"></i>
                     </div>
-                    <div class="card-body">
-                        <p>Real-time analysis of process data from individual tools to derive optimal recipes and
-                            parameters.</p>
-                        <ul class="tech-list">
-                            <li><span>></span> Clean/Process Recipe Optimization</li>
-                            <li><span>></span> Tool Sensor Level Analysis</li>
-                            <li><span>></span> Real-time Monitoring</li>
-                        </ul>
-                    </div>
+                    <h3 class="card-title">Unit Process Optimization</h3>
+                    <p class="card-desc">
+                        Real-time analysis of process data from individual tools to derive optimal recipes and
+                        parameters.
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> Recipe Optimization</li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> Sensor Level Analysis</li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> Real-time Monitoring</li>
+                    </ul>
                 </div>
 
-                <div class="tech-card active">
-                    <div class="card-border top-left"></div>
-                    <div class="card-border bottom-right"></div>
-                    <div class="card-header">
-                        <i class="fa-solid fa-network-wired icon"></i>
-                        <h3>Tool to Tool Matching (T²)</h3>
+                <div class="glass-card reveal">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-network-wired"></i>
                     </div>
-                    <div class="card-body">
-                        <p>Mathematically modeling and correcting tool-to-tool variations to synchronize total line
-                            performance.</p>
-                        <ul class="tech-list">
-                            <li><span>></span> Eliminate Output Variation</li>
-                            <li><span>></span> Minimize Loss Time</li>
-                            <li><span>></span> Global Synchronization</li>
-                        </ul>
-                    </div>
+                    <h3 class="card-title">Tool to Tool Matching (T²)</h3>
+                    <p class="card-desc">
+                        Mathematically modeling and correcting tool-to-tool variations to synchronize total line
+                        performance.
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> Eliminate Variation</li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> Minimize Loss Time</li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> Global Sync</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Areas Section -->
-    <section id="areas" class="section dark-bg">
+    <!-- Workflow Section -->
+    <section id="workflow" class="section" style="background: var(--bg-secondary);">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">02</span>
-                <h2 class="section-title">Target Areas</h2>
+            <div class="section-header reveal">
+                <span class="section-label">02 / Our Process</span>
+                <h2 class="section-title">Project Workflow</h2>
+                <p class="text-muted">A systematic 10-step process to accurately diagnose client issues and deliver
+                    solid, data-driven solutions.</p>
             </div>
 
-            <div class="process-track">
-                <div class="process-node">
-                    <div class="node-circle">Etch</div>
-                    <div class="node-info">
-                        <h4>Etching</h4>
-                        <p>Enhanced Etching Precision</p>
+            <div
+                style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                <!-- Step 1 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            01</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Inquiry & Intake</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Receiving client
+                            needs via Web/Email and assigning a dedicated engineer.</p>
                     </div>
                 </div>
-                <div class="process-line"></div>
-                <div class="process-node">
-                    <div class="node-circle">CVD</div>
-                    <div class="node-info">
-                        <h4>Deposition</h4>
-                        <p>Stabilized Film Quality</p>
+
+                <!-- Step 2 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            02</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Site Visit & Problem ID</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Visiting the Fab
+                            site to listen to pain points and diagnose current equipment operations.</p>
                     </div>
                 </div>
-                <div class="process-line"></div>
-                <div class="process-node">
-                    <div class="node-circle">Epi</div>
-                    <div class="node-info">
-                        <h4>Epitaxy</h4>
-                        <p>Optimized Crystal Growth</p>
+
+                <!-- Step 3 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            03</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Data Check & Scoping</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Reviewing sample
+                            data (Log, Metrology) to identify core solvable tasks.</p>
                     </div>
                 </div>
+
+                <!-- Step 4 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            04</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Proposal (Cost/Roadmap)</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Briefing on the
+                            proposal, including estimated costs, manpower, and overall project schedule.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            05</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Contract & Scope Align</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Finalizing
+                            specific scope including Target Tools, Duration, and KPIs, followed by contract signing.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            06</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Data Collection</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Securing deep data
+                            including tool sensors, process parameters, PM cycles, recipes, and inline metrology.</p>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            07</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Technical Meetings (W/M)</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Sharing analysis
+                            progress and discussing technical issues through weekly/monthly meetings.</p>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            08</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Sample Run Test</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Applying the
+                            optimized models (Recipe/Parameter) to actual equipment to test performance.</p>
+                    </div>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            09</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Quality Review</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Final verification
+                            of whether target KPIs (Yield, Availability) have been achieved based on test results.</p>
+                    </div>
+                </div>
+
+                <!-- Step 10 -->
+                <div class="glass-card reveal" style="display: flex; gap: 1.5rem;">
+                    <div style="flex-shrink: 0;">
+                        <div
+                            style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-family: var(--font-display); font-size: 1.25rem;">
+                            10</div>
+                    </div>
+                    <div>
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                            Closing & Handover</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Delivery of the
+                            final report, solution transfer, and project termination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="reveal"
+                style="margin-top: 3rem; text-align: center; padding: 2rem; background: white; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+                <p
+                    style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--text-primary); line-height: 1.6;">
+                    "We maintain your equipment in its most perfect state<br>through a systematic data analysis
+                    process."
+                </p>
             </div>
         </div>
     </section>
@@ -166,146 +320,142 @@
     <!-- Benefits Section -->
     <section id="benefits" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">03</span>
+            <div class="section-header reveal">
+                <span class="section-label">03 / Impact</span>
                 <h2 class="section-title">Key Benefits</h2>
             </div>
 
-            <div class="metrics-grid">
-                <div class="metric-item">
-                    <div class="metric-value">UP</div>
-                    <div class="metric-label">Productivity</div>
-                    <p>Maximize Output per Unit Time</p>
+            <div class="card-grid">
+                <div class="glass-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3 class="card-title">Productivity</h3>
+                    <p class="card-desc">Maximize output per unit time through loss time elimination.</p>
                 </div>
-                <div class="metric-item">
-                    <div class="metric-value">DOWN</div>
-                    <div class="metric-label">Downtime</div>
-                    <p>Prevent Unexpected Tool Downtime</p>
+                <div class="glass-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="card-title">Quality</h3>
+                    <p class="card-desc">Reduce process variation and secure consistent yield.</p>
                 </div>
-                <div class="metric-item">
-                    <div class="metric-value">HIGH</div>
-                    <div class="metric-label">Quality</div>
-                    <p>Reduce Process Variation & Secure Yield</p>
-                </div>
-                <div class="metric-item">
-                    <div class="metric-value">LOW</div>
-                    <div class="metric-label">Cost</div>
-                    <p>Reduce Maintenance Costs & Scrap</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="section dark-bg">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">04</span>
-                <h2 class="section-title">Expert Team</h2>
-                <p class="section-subtitle">Decades of hands-on experience meets cutting-edge data science</p>
-            </div>
-
-            <div class="team-grid">
-                <!-- Senior Process Engineer -->
-                <div class="team-card">
-                    <div class="team-icon">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <h3 class="team-title">Senior Process & Equipment Manpower</h3>
-                    <!-- <div class="experience-bar">
-                        <div class="exp-fill" data-year="20+"></div>
-                    </div> -->
-                    <p class="team-desc">20+ years of hands-on experience in process and equipment engineering</p>
-                    <ul class="expertise-list">
-                        <li><span>▸</span> Major Semiconductor Manufacturers</li>
-                        <li><span>▸</span> Leading Tool Suppliers</li>
-                        <li><span>▸</span> Etch, CVD, Epi Process Expertise</li>
-                        <li><span>▸</span> Equipment Maintenance & PM Optimization</li>
-                    </ul>
-                    <div class="team-badge">Field Expert</div>
-                </div>
-
-                <!-- Data Science Engineer -->
-                <div class="team-card">
-                    <div class="team-icon">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="team-title">Semiconductor Data Scientists</h3>
-                    <div class="experience-bar">
-                        <div class="exp-fill optimized" data-year="Optimized"></div>
-                    </div>
-                    <p class="team-desc">Specialized in semiconductor manufacturing data analytics and AI/ML</p>
-                    <ul class="expertise-list">
-                        <li><span>▸</span> Advanced Statistical Modeling</li>
-                        <li><span>▸</span> Machine Learning for Process Control</li>
-                        <li><span>▸</span> Real-time Data Analytics Platform</li>
-                        <li><span>▸</span> Predictive Maintenance Algorithms</li>
-                    </ul>
-                    <div class="team-badge">AI Ready</div>
-                </div>
-            </div>
-
-            <!-- Team Stats -->
-            <div class="team-stats">
-                <div class="stat-box">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-text">Years Experience</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">60+</div>
-                    <div class="stat-text">Projects Completed</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-text">Online Support Available</div>
+                <div class="glass-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-coins"></i></div>
+                    <h3 class="card-title">Cost Efficiency</h3>
+                    <p class="card-desc">Reduce maintenance costs and scrap through predictive models.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" style="background: var(--bg-secondary);">
         <div class="container">
-            <div class="contact-terminal">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">user@t-square:~/contact</span>
-                </div>
-                <div class="terminal-body">
-                    <div class="terminal-line">
-                        <span class="prompt">$</span> <span class="cmd">initiate_contact_sequence</span>
-                    </div>
-                    <form id="contact-form" class="terminal-form">
-                        <div class="input-group">
-                            <label>> Name:</label>
-                            <input type="text" name="from_name" class="terminal-input" required>
+            <div class="section-header reveal">
+                <span class="section-label">04 / Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="text-muted">Ready to optimize your semiconductor manufacturing process?</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1100px; margin: 0 auto;">
+                <!-- Contact Form -->
+                <div class="glass-card reveal" style="padding: 2.5rem;">
+                    <h3
+                        style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-envelope"></i> Send us a message
+                    </h3>
+                    <form id="contact-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary); font-size: 0.9rem;">Name
+                                *</label>
+                            <input type="text" name="name" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-family: var(--font-sans); font-size: 1rem; transition: border 0.2s;"
+                                onfocus="this.style.borderColor='var(--primary)'"
+                                onblur="this.style.borderColor='var(--border)'">
                         </div>
-                        <div class="input-group">
-                            <label>> Company:</label>
-                            <input type="text" name="company" class="terminal-input" required>
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary); font-size: 0.9rem;">Email
+                                *</label>
+                            <input type="email" name="email" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-family: var(--font-sans); font-size: 1rem; transition: border 0.2s;"
+                                onfocus="this.style.borderColor='var(--primary)'"
+                                onblur="this.style.borderColor='var(--border)'">
                         </div>
-                        <div class="input-group">
-                            <label>> Email:</label>
-                            <input type="email" name="from_email" class="terminal-input" required>
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary); font-size: 0.9rem;">Company</label>
+                            <input type="text" name="company"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-family: var(--font-sans); font-size: 1rem; transition: border 0.2s;"
+                                onfocus="this.style.borderColor='var(--primary)'"
+                                onblur="this.style.borderColor='var(--border)'">
                         </div>
-                        <div class="input-group">
-                            <label>> Message:</label>
-                            <textarea name="message" class="terminal-input" rows="3" required></textarea>
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary); font-size: 0.9rem;">Message
+                                *</label>
+                            <textarea name="message" required rows="5"
+                                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-family: var(--font-sans); font-size: 1rem; resize: vertical; transition: border 0.2s;"
+                                onfocus="this.style.borderColor='var(--primary)'"
+                                onblur="this.style.borderColor='var(--border)'"></textarea>
                         </div>
-                        <button type="submit" class="btn-terminal">[ EXECUTE ]</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="form-message"
+                            style="font-family: var(--font-mono); font-size: 0.9rem; text-align: center; min-height: 20px;">
+                        </div>
                     </form>
-                    <div id="response-message" class="response-message"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <div class="glass-card reveal" style="padding: 2.5rem; margin-bottom: 1.5rem;">
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;">
+                            <i class="fa-solid fa-building"></i> Company Information
+                        </h3>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong>Email:</strong> <a href="mailto:info@t-square.com"
+                                        style="color: var(--primary); text-decoration: none;">info@t-square.com</a></span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span><strong>Phone:</strong> +82-2-XXXX-XXXX</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span><strong>Location:</strong> Seoul, South Korea</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card reveal"
+                        style="padding: 2.5rem; background: linear-gradient(135deg, rgba(8, 145, 178, 0.05), rgba(79, 70, 229, 0.05));">
+                        <h3
+                            style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-handshake"></i> Partnership
+                        </h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                            We work with leading semiconductor manufacturers worldwide to deliver cutting-edge process
+                            optimization solutions.
+                        </p>
+                        <a href="br.en.2.pdf" class="btn btn-glass" download
+                            style="display: inline-flex; width: 100%; justify-content: center;">
+                            <i class="fa-solid fa-download"></i> Download Brochure
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                T-Square <span class="sup">T²</span>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="brand">
+                <div class="brand-logo">T²</div>
+                <span>T-Square</span>
             </div>
             <div class="footer-copy">
                 &copy; 2024 T-Square Inc. All Systems Operational.
@@ -313,9 +463,30 @@
         </div>
     </footer>
 
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Contact Form Handler
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formMessage = document.getElementById('form-message');
+            formMessage.innerHTML = '<span style="color: var(--primary);">✓ Message sent successfully! We will contact you soon.</span>';
+            this.reset();
+            setTimeout(() => {
+                formMessage.innerHTML = '';
+            }, 5000);
+        });
+    </script>
 </body>
 
 </html>
