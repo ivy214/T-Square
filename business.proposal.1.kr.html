@@ -695,8 +695,8 @@
 
         <div style="margin-top: 40px;">
             <h3 style="color: #0F1E3D;">1. 시니어 자문단 (Grey Expert) 활용</h3>
-            <p>삼성전자, SK하이닉스 등에서 수십 년간 장비를 다루고 은퇴한 베테랑 엔지니어들을 '기술 고문' 또는 '프로젝트 계약직'으로 영입합니다. 이들의 현장 노하우와 영업 네트워크는 T2
-                Square의 핵심 자산입니다.</p>
+            <p>이미 보유한 공정·하드웨어·소프트웨어 전문 팀의 기술력 위에, 삼성전자 및 SK하이닉스 출신 베테랑 엔지니어들의 통찰력을 더했습니다. 이들 자문단은 고난도 이슈 해결을 지원하고, 풍부한
+                현장 네트워크를 통해 고객사와의 신뢰 구축을 가속화하는 핵심 파트너로 활동합니다.</p>
 
             <h3 style="color: #0F1E3D; margin-top: 30px;">2. 정부 지원 프로그램 레버리지</h3>
             <p>'AI 바우처 공급기업' 등록 및 '초격차 스타트업 1000+' 프로젝트 참여를 통해 R&D 자금을 확보하고, 고객사의 솔루션 도입 비용 부담을 낮춥니다.</p>
@@ -858,18 +858,168 @@
             </table>
         </div>
 
-        <div class="box-gray" style="margin-top: 40px; background-color: #F8F9FA; border-left: 4px solid #333;">
-            <h4 style="margin: 0 0 15px 0; color: #333; font-size: 16px;">💡 Quick Selection Guide</h4>
-            <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #444; line-height: 1.8;">
-                <li><strong>식각(Etch)이 필요하다면?</strong> Lam의 <em>Kiyo/Flex</em> 시리즈가 강세이며, 최신 공정엔 <em>Sense.i</em>가 도입됩니다.
-                </li>
-                <li><strong>증착(CVD)이 필요하다면?</strong> AMAT <em>Producer</em>가 표준이지만, 금속 배선(W)은 Lam <em>Altus</em>가
-                    독보적입니다.</li>
-                <li><strong>평탄화(CMP)가 필요하다면?</strong> AMAT <em>Reflexion</em> 시리즈가 시장을 사실상 독점하고 있습니다.</li>
-            </ul>
+        <div class="page-num">Appx-2</div>
+    </div>
+
+    <!-- [NEW PAGE: APPX-3 PROPRIETARY TECH STACK] -->
+    <div class="page">
+        <div class="logo">T2 SQUARE</div>
+
+        <span class="sub-header">TECHNICAL SPECIFICATIONS</span>
+        <h1 class="main-header">Proprietary Tech Stack<br><span class="highlight">For High-Frequency Data</span></h1>
+
+        <p>기존 레거시 상용 툴의 무거운 구조와 높은 라이선스 비용을 탈피하여, <strong>나노초(Nano-second) 단위 데이터 처리에 최적화된 유연하고 빠른 Modern
+                Stack</strong>을 구축합니다.</p>
+
+        <div style="margin-top: 30px;">
+            <!-- Section A: Connectivity -->
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #0F1E3D; border-left: 4px solid #2A5BD9; padding-left: 15px; margin-bottom: 10px;">
+                    A. Data Collection (Connectivity)</h3>
+                <div style="background-color: #F9FAFB; padding: 15px; border-radius: 8px;">
+                    <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #444; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;">
+                            <strong>Python 'secsgem' Library:</strong> 오픈소스 기반의 경량화된 SECS/GEM 드라이버를 자체 구현하여 초기 라이선스 비용
+                            없이 데이터를 추출합니다.
+                        </li>
+                        <li>
+                            <strong>High-Speed DAQ (Nano-second):</strong> 기존 통신 속도(1~10Hz)의 한계를 극복하기 위해 <em>NI
+                                LabVIEW</em> 또는 <em>Python PyVISA</em>를 활용, 오실로스코프 및 VI Probe의 파형 데이터를 실시간 수집합니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section B: Storage -->
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #0F1E3D; border-left: 4px solid #2A5BD9; padding-left: 15px; margin-bottom: 10px;">
+                    B. Storage (Time-Series DB)</h3>
+                <div style="background-color: #F9FAFB; padding: 15px; border-radius: 8px;">
+                    <p style="font-size: 13px; margin: 0 0 10px 0;">일반 RDBMS는 초당 수만 건의 센서 데이터를 감당할 수 없습니다. 시계열 전용 DB를 통해
+                        고속 쓰기 성능을 확보합니다.</p>
+                    <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #444; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;"><strong>InfluxDB:</strong> 업계 표준 오픈소스 TSDB로, Python과의 연동성이 뛰어나며
+                            고속 데이터 인제스트(Ingest)에 최적화되어 있습니다.</li>
+                        <li><strong>TimescaleDB:</strong> PostgreSQL 기반으로, 기존 SQL 쿼리 지식을 활용하면서도 시계열 데이터의 파티셔닝과 압축 효율을
+                            극대화합니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section C: Visualization -->
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #0F1E3D; border-left: 4px solid #2A5BD9; padding-left: 15px; margin-bottom: 10px;">
+                    C. Visualization & Dashboard</h3>
+                <table class="styled-table" style="margin-top: 0;">
+                    <tbody>
+                        <tr>
+                            <td width="30%" style="font-weight: bold; color: #0F1E3D;">Grafana</td>
+                            <td>InfluxDB와 연동하여 센서 파형 및 설비 상태를 실시간 대시보드로 시각화 (Global Standard).</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; color: #0F1E3D;">SciChart</td>
+                            <td>수백만 개의 데이터 포인트를 지연(Lag) 없이 렌더링하는 고성능 차트 엔진.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; color: #0F1E3D;">ThingsBoard</td>
+                            <td>다수 설비의 상태를 한눈에 관리하는 Fleet Management에 특화된 IoT 플랫폼.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <div class="page-num">Appx-2</div>
+        <!-- Strategy Box -->
+        <div class="box-gray" style="margin-top: 30px; border-left: 4px solid #0F1E3D;">
+            <h4 style="margin: 0 0 10px 0; color: #0F1E3D; font-size: 15px;">Strategic Development Roadmap (MVP)</h4>
+            <p style="margin: 0 0 10px 0; font-size: 13px;">
+                <strong>Step 1:</strong> Python <em>secsgem</em> 수집 ➔ <strong>Step 2:</strong> InfluxDB 저장 ➔
+                <strong>Step 3:</strong> Grafana 시각화
+            </p>
+            <p style="margin: 0; font-size: 13px; color: #2A5BD9; font-weight: bold;">
+                "단순 통계적 매칭(Mean/Std)을 넘어, Scikit-learn/PyTorch 기반의 AI 패턴 인식으로 '지능형 매칭'을 구현합니다."
+            </p>
+        </div>
+
+        <div class="page-num">Appx-3</div>
+    </div>
+
+
+    <div class="page">
+        <div class="logo">T2 SQUARE</div>
+
+        <span class="sub-header">TECHNICAL SPECIFICATIONS</span>
+        <h1 class="main-header">Proprietary Tech Stack<br><span class="highlight">For CFM Data Analytics</span></h1>
+
+        <p>복잡한 실시간 통신이나 별도의 하드웨어 설치 없이, <strong>AMAT 설비 고유의 고해상도 센서 데이터(CFM)를 활용하여 즉시 문제 분석과 수율 개선</strong>이 가능한 실용적 스택을
+            제공합니다.</p>
+
+        <div style="margin-top: 30px;">
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #0F1E3D; border-left: 4px solid #2A5BD9; padding-left: 15px; margin-bottom: 10px;">
+                    A. Data Ingestion (Log-based)</h3>
+                <div style="background-color: #F9FAFB; padding: 15px; border-radius: 8px;">
+                    <p style="font-size: 13px; margin: 0 0 10px 0; color: #444;">
+                        초기 진입 단계에서는 팹의 보안 및 운영 부담을 고려하여, <strong>실시간 연동 대신 공정 종료 후 생성되는 로그 파일 분석</strong>에 집중합니다.
+                    </p>
+                    <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #444; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;">
+                            <strong>AMAT Native Parser:</strong> 암호화되거나 바이너리 형태로 저장된 AMAT 장비(Centura, Producer 등)의 CFM
+                            로그를 손실 없이 디코딩하는 자체 파서를 보유하고 있습니다.
+                        </li>
+                        <li>
+                            <strong>Batch Processing Pipeline:</strong> 설비내에 있는 공정 진행시 생성되는 센서 데이터를
+                            이용하여 분석과 예측을 수행합니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #0F1E3D; border-left: 4px solid #2A5BD9; padding-left: 15px; margin-bottom: 10px;">
+                    B. Analysis Engine (R2R Control)</h3>
+                <div style="background-color: #F9FAFB; padding: 15px; border-radius: 8px;">
+                    <p style="font-size: 13px; margin: 0 0 10px 0;">대부분의 공정 이슈는 <strong>'실시간 차단'보다는 '미세 변동
+                            추적'</strong>으로 해결 가능합니다.</p>
+                    <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #444; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;"><strong>Run-to-Run (R2R) Feedback:</strong> N번째 웨이퍼의 CFM 데이터를
+                            분석하여, 챔버 상태 변화(Drift)를 감지하고 N+1번째 공정 레시피를 미세 보정합니다.</li>
+                        <li><strong>Post-process Deep Analysis:</strong> 공정 완료 직후 센서 파형을 전수 검사하여, 기존 SPC(통계적 공정 관리)가 놓친
+                            비정상 패턴을 사후 검출합니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h3 style="color: #0F1E3D; border-left: 4px solid #2A5BD9; padding-left: 15px; margin-bottom: 10px;">
+                    C. Visualization (Golden Trace)</h3>
+                <table class="styled-table" style="margin-top: 0;">
+                    <tbody>
+                        <tr>
+                            <td width="30%" style="font-weight: bold; color: #0F1E3D;">Trace Comparison</td>
+                            <td>가장 수율이 좋았던 'Golden Wafer'의 센서 파형과 현재 파형을 겹쳐서 비교(Overlay)하여 직관적으로 문제 구간을 식별합니다.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; color: #0F1E3D;">Feature Extraction</td>
+                            <td>복잡한 파형 데이터에서 핵심 특징(기울기, 피크, 적분값 등)만을 추출하여 엔지니어에게 의미 있는 지표로 시각화합니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="box-gray" style="margin-top: 30px; border-left: 4px solid #0F1E3D;">
+            <h4 style="margin: 0 0 10px 0; color: #0F1E3D; font-size: 15px;">Early Entry Strategy (Phase 1)</h4>
+            <p style="margin: 0 0 10px 0; font-size: 13px;">
+                <strong>"No Hardware, No Interruption."</strong>
+            </p>
+            <p style="margin: 0; font-size: 13px; color: #444;">
+                초기 프로젝트는 장비를 멈추거나 개조할 필요가 없는 <strong>'Offline CFM 분석'</strong>으로 시작합니다. 이를 통해 리스크 없이 데이터의 효용성을 검증한 후,
+                신뢰가 쌓이면 자동화 단계로 넘어가는 단계적 도입 전략을 취합니다.
+            </p>
+        </div>
+
+        <div class="page-num">Appx-3</div>
     </div>
 </body>
 
